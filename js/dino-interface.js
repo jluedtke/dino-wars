@@ -1,4 +1,5 @@
 var Dino = require('./../js/dino.js').dinoModule;
+var GameMaster = require('./../js/dino.js').gameModule;
 
 var displayNames1 = function(name) {
   $('.output').append(name + "<br>");
@@ -13,7 +14,7 @@ $(document).ready(function() {
     $('.output').empty();
     $('.output2').empty();
     event.preventDefault();
-    var dino = new Dino(name);
-    dino.getDinoTeam(displayNames1, displayNames2);
+    var game = new GameMaster();
+    game.getDinoTeam(displayNames1, displayNames2);
   });
 });
