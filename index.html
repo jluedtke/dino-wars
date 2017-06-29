@@ -10,23 +10,44 @@
   </head>
   <body>
     <div class="container">
-
-      <h1>Dino Wars</h1>
-      <button type="button" id="play">PLAY</button>
-      <h3>Your team of Dinos</h3>
-      <div class="output">
-
+      <div class="jumbotron">
+        <img src="/img/dino4.gif" alt="dino">
+        <h1>Dino Wars</h1>
       </div>
-      <h3>Other team of Dinos</h3>
-      <div class="output2">
+      <button type="button" id="play" class="btn-lg">PLAY</button>
+      <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3">
+          <h3>Team One Dinos</h3>
+          <div id="dino-team-one">
 
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <h3>Team Two Dinos</h3>
+          <div id="dino-team-two">
+
+          </div>
+        </div>
+        <div class="col-sm-3"></div>
       </div>
       <hr>
-      <button type="button" id="battle">BATTLE</button>
+      <button type="button" id="battle" class="btn-lg">BATTLE</button>
       <br>
-      <div id="battle-results">
+      <div id="dino-battle">
+        <h2>Team One Dino</h2>
+        <h4 id="dino-one-name"></h4>
+        <h4 id="dino-one-health"></h4>
+        <h3>VS</h3>
+        <h2>Team Two Dino</h2>
+        <h4 id="dino-two-name"></h4>
+        <h4 id="dino-two-health"></h4>
+        <h2>The winner of this round: <span id="dino-winner"></span></h2>
+        <div id="team-winner">
 
+        </div>
       </div>
+      <!-- <button type="button" id="reset">PLAY AGAIN</button> -->
     </div>
   </body>
 </html>
