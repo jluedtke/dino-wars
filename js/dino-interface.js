@@ -12,16 +12,17 @@ var displayDinoHealth = function(name1, health1, name2, health2, image1, image2)
   console.log('displayDinoHealth called');
   $('#dino-one-name').text("Name: " + name1);
   $('#dino-one-health').text("Health: " + health1);
-  $('#dino-image-one').html("<img src='" + image1 + "' alt='dino' width='150px'>");
+  $('#dino-image-one').html("<img src='" + image1 + "' alt='dino' width='250px'>");
   $('#dino-two-name').text("Name: " + name2);
   $('#dino-two-health').text("Health: " + health2);
-  $('#dino-image-two').html("<img src='" + image2 + "' alt='dino' width='150px'>");
+  $('#dino-image-two').html("<img src='" + image2 + "' alt='dino' width='250px'>");
 };
 var displayDinoWinner = function(string) {
   $("#dino-winner").text(string);
 };
 var displayTeamWinner = function(string) {
-  $("#team-winner").text(string);
+  $("#team-winner").prepend(string);
+  $("#team-winner").prepend("<img src='img/dino-meteor.gif' alt='winner-dino' width='300px'>");
 };
 
 $(document).ready(function() {
@@ -30,6 +31,7 @@ $(document).ready(function() {
     $('#dino-battle').hide();
     $('#dino-team-one').empty();
     $('#dino-team-two').empty();
+    $('#team-winner').empty();
     // console.log("empty " + newArray);
     var game = new GameMaster();
     var newPromise = game.getDinoTeam(displayNames1, displayNames2);
