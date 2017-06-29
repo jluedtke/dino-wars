@@ -35,14 +35,25 @@
       <button type="button" id="battle" class="btn-lg">BATTLE</button>
       <br>
       <div id="dino-battle">
-        <h2>Team One Dino</h2>
-        <h4 id="dino-one-name"></h4>
-        <h4 id="dino-one-health"></h4>
-        <h3>VS</h3>
-        <h2>Team Two Dino</h2>
-        <h4 id="dino-two-name"></h4>
-        <h4 id="dino-two-health"></h4>
-        <h2>The winner of this round: <span id="dino-winner"></span></h2>
+        <div class="row">
+          <div class="col-sm-5">
+            <h2>Team One Dino</h2>
+            <h4 id="dino-one-name"></h4>
+            <h4 id="dino-one-health"></h4>
+            <span class="dino-empty" id ="dino-image-one"></span>
+          </div>
+          <div class="col-sm-2">
+            <h3>VS</h3>
+          </div>
+          <div class="col-sm-5">
+            <h2>Team Two Dino</h2>
+            <h4 id="dino-two-name"></h4>
+            <h4 id="dino-two-health"></h4>
+            <span class="dino-empty" id ="dino-image-two"></span>
+          </div>
+        </div>
+        <h2 class="dino-empty" id="dino-winner">
+        </h2>
         <div id="team-winner">
 
         </div>
